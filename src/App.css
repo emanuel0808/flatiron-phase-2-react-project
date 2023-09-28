@@ -1,0 +1,58 @@
+/* App.css */
+
+/* Style for the container holding the meal cards */
+.meal-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Add some space between the cards */
+}
+
+/* Style for individual meal cards */
+.meal-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+
+  /* Center the text and image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style for the meal card image */
+.meal-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for meal details (hidden by default) */
+.meal-details {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* Style for the show/hide animation of meal details */
+.meal-card:hover {
+  transform: scale(1.05);
+}
+
+/* Style for showing meal details when the image is clicked */
+.meal-card.show-details {
+  transform: scale(1.05);
+}
+
+/* Style for individual meal details */
+.meal-details div {
+  margin-bottom: 10px;
+}
+
+/* Add any other custom styles you prefer */

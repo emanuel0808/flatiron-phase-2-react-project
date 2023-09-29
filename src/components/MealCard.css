@@ -1,0 +1,34 @@
+/* MealCard.css */
+.meal-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .meal-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .meal-card h3 {
+    margin: 10px 0;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .meal-details {
+    display: none;
+  }
+  
+  .meal-card.active .meal-details {
+    display: block;
+  }
+  
+  /* Add any additional styling you desire to make it look cool */
+  

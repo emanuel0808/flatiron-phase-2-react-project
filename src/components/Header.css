@@ -1,0 +1,47 @@
+/* Header Container */
+.header {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 1rem 0; /* Padding (top and bottom) */
+    text-align: center; /* Center align text */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a subtle elevation effect */
+  }
+  
+  /* Header Title */
+  .header h1 {
+    margin: 0;
+    font-size: 2rem; /* Font size */
+  }
+  
+  /* Header Subtitle */
+  .header p {
+    margin: 0;
+    font-size: 1rem; /* Font size */
+  }
+  
+  /* Navigation Links */
+  .nav-links {
+    list-style: none; /* Remove list bullets */
+    padding: 0;
+    display: flex; /* Display links horizontally */
+    justify-content: center; /* Center align links horizontally */
+  }
+  
+  /* Navigation Link Items */
+  .nav-links li {
+    margin: 0 1rem; /* Spacing between links */
+  }
+  
+  /* Navigation Links Styling (Change the color as needed) */
+  .nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Link text color */
+    font-weight: 500; /* Font weight */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+  
+  /* Style for Navigation Links on Hover */
+  .nav-links a:hover {
+    color: #ff5733; /* Change color on hover */
+  }
+  

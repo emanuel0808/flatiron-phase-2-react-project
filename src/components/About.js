@@ -1,19 +1,16 @@
+// About.js
 import React from 'react';
 
-function Contact() {
+function About() {
   return (
     <div>
-      <h2>Contact Us</h2>
+      <h1>About Us</h1>
       <p>
-        If you have any questions or need assistance, feel free to contact us:
+        Welcome to our Meal-Prep App! Our mission is to help you achieve your health and fitness goals
+        by providing delicious and nutritious meal plans designed for weight loss and overall well-being.
       </p>
-      <ul>
-        <li>Email: gaonaemanuel7@gmail.com</li>
-        <li>Phone: +1 (123) 456-7890</li> {/* You can use any fictional phone number */}
-      </ul>
     </div>
   );
 }
 
-export default Contact;
-
+export default About;

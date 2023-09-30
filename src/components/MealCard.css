@@ -1,24 +1,32 @@
 /* MealCard.css */
 .meal-card {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
+    width: 200px; /* Adjust the width as needed */
+    height: 250px; /* Adjust the height as needed */
     margin: 10px;
-    background-color: #fff;
+    padding: 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 12px;
+    background-color: #f3f3f3; /* Light gray background suitable for color-blind users */
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
   }
   
   .meal-card img {
     width: 100%;
+    max-height: 120px; /* Adjust the max height as needed */
+    object-fit: cover;
     border-radius: 10px;
   }
   
   .meal-card h3 {
     margin: 10px 0;
     font-size: 1.5rem;
-    text-align: center;
     color: #333;
   }
   
@@ -29,6 +37,4 @@
   .meal-card.active .meal-details {
     display: block;
   }
-  
-  /* Add any additional styling you desire to make it look cool */
   

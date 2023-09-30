@@ -1,9 +1,12 @@
 import React from 'react';
 
 const MealPlan = ({ mealPlanData }) => {
+  // Check if mealPlanData is defined, and if not, set it to an empty array
+  const data = mealPlanData || [];
+
   return (
     <div className="meal-plan">
-      {mealPlanData.map((day) => (
+      {data.map((day) => (
         <div key={day.day} className="meal-day">
           <h2>{day.day}</h2>
           <img src={day.image} alt={`Meal plan for ${day.day}`} />

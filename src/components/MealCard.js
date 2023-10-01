@@ -1,4 +1,6 @@
+// MealCard.js
 import React, { useState } from 'react';
+import './App.css'; // Import your CSS file
 
 const MealCard = ({ day, image, meals }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -8,7 +10,7 @@ const MealCard = ({ day, image, meals }) => {
   };
 
   return (
-    <div className="meal-card">
+    <div className="meal-card"> {/* Apply the "meal-card" class */}
       <img src={image} alt={`Meal for ${day}`} onClick={toggleDetails} />
       <h3>{day}</h3>
       {showDetails && (

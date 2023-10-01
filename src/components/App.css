@@ -1,36 +1,64 @@
 /* App.css */
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  background-color: #f0f0f0; /* Light background color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.meal-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.meal-card {
+  width: 200px;
+  height: 250px;
+  background-color: #333; /* Dark background color */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Professional shadow */
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.meal-card:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.meal-card img {
+  max-width: 100%;
+  max-height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.meal-card h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.meal-card p {
+  margin: 5px 0;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .meal-card:nth-child(odd) {
+    flex-basis: calc(50% - 20px); /* 50% width with gap for odd cards */
   }
-  
-  /* Set the background color for the entire app */
-  body {
-    background-color:black;
+  .meal-card:nth-child(even) {
+    flex-basis: 100%; /* 100% width for even cards */
   }
-  
-  /* Style the Header component */
-  .header {
-    background-color: #3498db;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  /* Style the MealPlan component (you can customize this) */
-  .meal-plan {
-    padding: 1rem;
-  }
-  
-  /* Style the Footer component (you can customize this) */
-  .footer {
-    background-color: #3498db;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-  }
-  
+}

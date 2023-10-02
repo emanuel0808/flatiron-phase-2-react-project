@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MealPlan = ({ mealPlanData }) => {
-  // Check if mealPlanData is defined, and if not, set it to an empty array
+  
   const data = mealPlanData || [];
 
   return (

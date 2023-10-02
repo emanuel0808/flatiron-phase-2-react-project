@@ -5,20 +5,32 @@ import Header from './Header';
 import MealPlan from './MealPlan';
 import Footer from './Footer';
 import MealCard from './MealCard';
-import About from './About'; // Import the About component
-import Contact from './Contact'; // Import the Contact component
+import MealForm from './MealForm';
 
 function App() {
   // Define the mealPlan state variable and set it to an empty array initially
   const [mealPlan, setMealPlan] = useState([]);
+  const [filteredMeals, setFilteredMeals] = useState([]); // State for filtered meals
 
   useEffect(() => {
     // Fetch meal plan data from your API or source
     fetch('http://localhost:3000/mealPlan')
       .then((response) => response.json())
-      .then((data) => setMealPlan(data)) // Update the mealPlan state with fetched data
+      .then((data) => {
+        setMealPlan(data);
+        setFilteredMeals(data); // Initialize filteredMeals with all meals
+      })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
+
+  // Function to handle the search for meals by day
+  const handleSearch = (searchDay) => {
+    // Filter the meals based on the entered day
+    const filtered = mealPlan.filter((dayData) =>
+      dayData.day.toLowerCase().includes(searchDay.toLowerCase())
+    );
+    setFilteredMeals(filtered); // Update the filteredMeals state
+  };
 
   return (
     <Router>
@@ -26,15 +38,16 @@ function App() {
         <Header />
         <MealPlan />
         <Footer />
+        <MealForm onSearch={handleSearch} /> {/* Pass the search function to MealForm */}
         <div className="meal-card-container">
           <Routes>
             <Route
               path="/"
               element={
                 <div>
-                  {/* Check if mealPlan is defined before mapping */}
-                  {mealPlan &&
-                    mealPlan.map((dayData, index) => (
+                  {/* Check if filteredMeals is defined before mapping */}
+                  {filteredMeals &&
+                    filteredMeals.map((dayData, index) => (
                       <MealCard
                         key={index}
                         day={dayData.day}
@@ -45,8 +58,6 @@ function App() {
                 </div>
               }
             />
-            <Route path="/about" element={<About />} /> {/* Route to the About component */}
-            <Route path="/contact" element={<Contact />} /> {/* Route to the Contact component */}
           </Routes>
         </div>
       </div>
@@ -55,4 +66,3 @@ function App() {
 }
 
 export default App;
-

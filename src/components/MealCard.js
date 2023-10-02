@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; // Import your CSS file
 
-const MealCard = ({ day, image, meals }) => {
+const MealCard = ({ day, image, meals, smallSize }) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -9,12 +9,12 @@ const MealCard = ({ day, image, meals }) => {
   };
 
   return (
-    <div className="meal-card"> {/* Apply the "meal-card" class */}
+    <div className={`meal-card ${smallSize ? 'small-size' : ''}`}>
       <img src={image} alt={`Meal for ${day}`} onClick={toggleDetails} />
       <h3>{day}</h3>
+      <p>Click the image to display meals for the day</p> {/* Description */}
       {showDetails && (
         <div className="meal-details">
-          <h4>Meals for {day}</h4>
           {meals.map((meal, index) => (
             <div key={index}>
               <p>Name: {meal.name}</p>
@@ -29,3 +29,4 @@ const MealCard = ({ day, image, meals }) => {
 };
 
 export default MealCard;
+

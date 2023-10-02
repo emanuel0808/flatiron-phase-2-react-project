@@ -1,11 +1,22 @@
 /* CSS for the sticky footer */
 .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background-color: #333; /* You can change the background color */
     color: #fff; /* You can change the text color */
     text-align: center;
     padding: 10px;
+    width: 100%;
   }
+  
+  /* Add a wrapper div to push the footer to the end */
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Push content to fill available space */
+  .content {
+    flex-grow: 1;
+  }
+  
   

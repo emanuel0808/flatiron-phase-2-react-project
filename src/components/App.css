@@ -8,7 +8,13 @@
 /* Set a background color for the entire app */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8; /* Light gray background */
+  background-color: purple; /* Light gray background */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100vh; /* Set the body to full height of the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
 }
 
 /* Style the header */
@@ -57,6 +63,8 @@ body {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: row; /* Display input and button horizontally */
 }
 
 .meal-form input[type="text"] {
@@ -83,18 +91,18 @@ body {
   background-color: #ff7043; /* Hover background color */
 }
 
-/* Style the meal cards */
+/* Style the meal cards container */
 .meal-card-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns in the first row */
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next row */
+  justify-content: space-between; /* Space evenly between cards horizontally */
   padding: 20px;
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 1200px; /* Limit card container width */
 }
 
-/* Style the first row of meal cards (4 cards) */
-.meal-card:nth-child(-n + 4) {
+/* Style the meal cards */
+.meal-card {
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -103,50 +111,22 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   overflow: hidden;
-  width: 300px;
+  width: calc(33.33% - 20px); /* 33.33% width for each card with spacing between */
+  margin-bottom: 20px; /* Add spacing between rows */
 }
 
-.meal-card:nth-child(-n + 4) img {
-  max-width: 100%;
-  height: auto;
+/* For screens smaller than 1200px, change the layout to 2 columns in the second row */
+@media screen and (max-width: 1200px) {
+  .meal-card {
+    width: calc(50% - 20px); /* 50% width for each card on smaller screens */
+  }
 }
 
-.meal-card:nth-child(-n + 4) h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-.meal-card:nth-child(-n + 4):hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Style the second row of meal cards (3 cards) */
-.meal-card:nth-child(n + 5) {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-  overflow: hidden;
-  width: 300px;
-}
-
-.meal-card:nth-child(n + 5) img {
-  max-width: 100%;
-  height: auto;
-}
-
-.meal-card:nth-child(n + 5) h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
-}
-
-.meal-card:nth-child(n + 5):hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+/* For screens smaller than 768px, display cards in a single column */
+@media screen and (max-width: 768px) {
+  .meal-card {
+    width: 100%; /* 100% width for each card on even smaller screens */
+  }
 }
 
 /* Style the meal details */
@@ -167,14 +147,5 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  position: absolute;
-  bottom: 0; /* Position at the bottom of the page */
   width: 100%; /* Full width */
-}
-
-/* Add media queries for responsiveness if needed */
-@media (max-width: 768px) {
-  .meal-card-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
-  }
 }

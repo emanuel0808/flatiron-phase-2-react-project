@@ -6,8 +6,8 @@ import MealPlan from './MealPlan';
 import Footer from './Footer';
 import MealCard from './MealCard';
 import MealForm from './MealForm';
-import About from './About';
-import Contact from './Contact';
+import About from './About'; // Import the About component
+import Contact from './Contact'; // Import the Contact component
 
 function App() {
   const [mealPlan, setMealPlan] = useState([]);
@@ -43,33 +43,28 @@ function App() {
             Whether you're looking to shed a few pounds or simply eat better, we've got you covered.
           </p>
         </div>
-        <Footer />
         <MealForm onSearch={handleSearch} />
         <div className="meal-card-container">
-          <Routes>
-            <Route
-              path="/"
-              element={
-                <div>
-                  {filteredMeals.map((dayData, index) => (
-                    <MealCard
-                      key={index}
-                      day={dayData.day}
-                      image={dayData.image}
-                      meals={dayData.meals}
-                    />
-                  ))}
-                </div>
-              }
+          {filteredMeals.map((dayData, index) => (
+            <MealCard
+              key={index}
+              day={dayData.day}
+              image={dayData.image}
+              meals={dayData.meals}
+              smallSize // Add a prop to indicate smaller size
             />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          ))}
         </div>
+        <Footer />
+        
+        {/* Define routes for About and Contact */}
+        <Routes>
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </div>
     </Router>
   );
 }
 
 export default App;
-

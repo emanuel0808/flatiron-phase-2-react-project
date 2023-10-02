@@ -22,5 +22,3 @@ function MealForm({ onSearch }) {
 }
 
 export default MealForm;
-
-

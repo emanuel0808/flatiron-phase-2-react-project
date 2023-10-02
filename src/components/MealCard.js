@@ -1,4 +1,3 @@
-// MealCard.js
 import React, { useState } from 'react';
 import './App.css'; // Import your CSS file
 
@@ -15,6 +14,7 @@ const MealCard = ({ day, image, meals }) => {
       <h3>{day}</h3>
       {showDetails && (
         <div className="meal-details">
+          <h4>Meals for {day}</h4>
           {meals.map((meal, index) => (
             <div key={index}>
               <p>Name: {meal.name}</p>

@@ -14,3 +14,4 @@ function MealItem({ meal }) {
 }
 
 export default MealItem;
+

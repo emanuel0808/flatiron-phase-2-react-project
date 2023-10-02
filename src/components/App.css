@@ -1,64 +1,180 @@
-/* App.css */
-body {
+/* Reset some default browser styles */
+* {
   margin: 0;
-  background-color: #f0f0f0; /* Light background color */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  gap: 20px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.meal-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* Set a background color for the entire app */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8; /* Light gray background */
 }
 
-.meal-card {
-  width: 200px;
-  height: 250px;
+/* Style the header */
+.header {
   background-color: #333; /* Dark background color */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Professional shadow */
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  color: white; /* Text color */
   text-align: center;
-  color: #fff;
+  padding: 20px;
 }
 
-.meal-card:hover {
-  transform: scale(1.05); /* Scale up on hover */
+.header h1 {
+  font-size: 2rem; /* Larger font size for the heading */
+  margin-bottom: 10px;
 }
 
-.meal-card img {
-  max-width: 100%;
-  max-height: 70%;
-  object-fit: cover;
-  border-radius: 10px;
+.header p {
+  font-size: 1rem; /* Font size for the paragraph */
 }
 
-.meal-card h3 {
-  margin: 10px 0;
-  font-size: 1.5rem;
+/* Style the navigation links */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
 }
 
-.meal-card p {
-  margin: 5px 0;
+.nav-links li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
   font-size: 1rem;
+  transition: color 0.3s;
 }
 
-@media (min-width: 768px) {
-  .meal-card:nth-child(odd) {
-    flex-basis: calc(50% - 20px); /* 50% width with gap for odd cards */
-  }
-  .meal-card:nth-child(even) {
-    flex-basis: 100%; /* 100% width for even cards */
+.nav-links a:hover {
+  color: #ff5722; /* Hover color */
+}
+
+/* Style the meal form */
+.meal-form {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.meal-form input[type="text"] {
+  padding: 10px;
+  width: 60%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.meal-form button {
+  padding: 10px 20px;
+  background-color: #ff5722; /* Orange button background color */
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.meal-form button:hover {
+  background-color: #ff7043; /* Hover background color */
+}
+
+/* Style the meal cards */
+.meal-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns in the first row */
+  gap: 20px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px; /* Limit card container width */
+}
+
+/* Style the first row of meal cards (4 cards) */
+.meal-card:nth-child(-n + 4) {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px;
+}
+
+.meal-card:nth-child(-n + 4) img {
+  max-width: 100%;
+  height: auto;
+}
+
+.meal-card:nth-child(-n + 4) h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.meal-card:nth-child(-n + 4):hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the second row of meal cards (3 cards) */
+.meal-card:nth-child(n + 5) {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+  width: 300px;
+}
+
+.meal-card:nth-child(n + 5) img {
+  max-width: 100%;
+  height: auto;
+}
+
+.meal-card:nth-child(n + 5) h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.meal-card:nth-child(n + 5):hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the meal details */
+.meal-details {
+  padding: 10px;
+  text-align: left;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+.meal-details p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Style the footer */
+footer {
+  background-color: #333; /* Dark background color */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  bottom: 0; /* Position at the bottom of the page */
+  width: 100%; /* Full width */
+}
+
+/* Add media queries for responsiveness if needed */
+@media (max-width: 768px) {
+  .meal-card-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
 }

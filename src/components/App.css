@@ -95,14 +95,14 @@ body {
 /* Style the meal cards container */
 .meal-card-container {
   display: flex;
-  flex-wrap: wrap; /* Allow cards to wrap to the next row */
-  justify-content: space-between; /* Space evenly between cards horizontally */
+  flex-wrap: wrap; 
+  justify-content: space-between; 
   padding: 25px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Style the meal cards */
+
 .meal-card {
   background-color: grey;
   border: 1px solid #ddd;
@@ -112,32 +112,32 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   overflow: hidden;
-  width: calc(25% - 20px); /* 25% width for each card with spacing between */
-  margin-bottom: 20px; /* Add spacing between rows */
+  width: calc(25% - 20px); 
+  margin-bottom: 20px; 
   display: flex;
   flex-direction: column;
 }
 
-/* For screens smaller than 1200px, change the layout to 2 columns in the second row */
+
 @media screen and (max-width: 1200px) {
   .meal-card {
-    width: calc(33.33% - 20px); /* 33.33% width for each card on smaller screens */
+    width: calc(33.33% - 20px); 
   }
 }
 
-/* For screens smaller than 768px, display cards in a single column */
+
 @media screen and (max-width: 768px) {
   .meal-card {
-    width: 100%; /* 100% width for each card on even smaller screens */
+    width: 100%; 
   }
 }
 
-/* Style the meal details */
+
 .meal-details {
   padding: 10px;
   text-align: left;
-  background-color: grey; /* Light gray background */
-  flex-grow: 1; /* Allow details to expand and fill available space */
+  background-color: grey; 
+  flex-grow: 1; 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -148,7 +148,6 @@ body {
   margin: 5px 0;
 }
 
-/* Style the meal images to make them fit without scrolling */
 .meal-card img {
   max-width: 100%;
   height: auto;
@@ -156,11 +155,11 @@ body {
 
 
 
-/* Style the footer */
+
 footer {
-  background-color: #333; /* Dark background color */
+  background-color: #333; 
   color: white;
   text-align: center;
   padding: 10px;
-  width: 100%; /* Full width */
+  width: 100%; 
 }

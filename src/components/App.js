@@ -18,17 +18,17 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setMealPlan(data);
-        setFilteredMeals(data); // Initialize filteredMeals with all meals
+        setFilteredMeals(data); 
       })
       .catch((error) => console.error('Error fetching data:', error));
   }, []);
 
   const handleSearch = (searchDay) => {
-    // Filter the meals based on the entered day
+    
     const filtered = mealPlan.filter((dayData) =>
       dayData.day.toLowerCase().includes(searchDay.toLowerCase())
     );
-    setFilteredMeals(filtered); // Update the filteredMeals state
+    setFilteredMeals(filtered); 
   };
 
   return (
@@ -45,7 +45,7 @@ function App() {
         </div>
         <MealForm onSearch={handleSearch} />
         
-        {/* Conditionally render the meal cards on the homepage */}
+      
         {window.location.pathname === '/' && (
           <div className="meal-card-container">
             {filteredMeals.map((dayData, index) => (
@@ -54,13 +54,13 @@ function App() {
                 day={dayData.day}
                 image={dayData.image}
                 meals={dayData.meals}
-                smallSize // Add a prop to indicate smaller size
+                smallSize 
               />
             ))}
           </div>
         )}
 
-        {/* Define routes for About and Contact */}
+     
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />

@@ -1,47 +1,45 @@
-/* Header Container */
+
 .header {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
-    padding: 1rem 0; /* Padding (top and bottom) */
-    text-align: center; /* Center align text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a subtle elevation effect */
+    background-color: #333; 
+    color: #fff; 
+    padding: 1rem 0; 
+    text-align: center; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
-  
-  /* Header Title */
+
   .header h1 {
     margin: 0;
-    font-size: 2rem; /* Font size */
+    font-size: 2rem; 
   }
   
-  /* Header Subtitle */
+ 
   .header p {
     margin: 0;
-    font-size: 1rem; /* Font size */
+    font-size: 1rem; 
   }
   
-  /* Navigation Links */
+  
   .nav-links {
-    list-style: none; /* Remove list bullets */
+    list-style: none; 
     padding: 0;
-    display: flex; /* Display links horizontally */
-    justify-content: center; /* Center align links horizontally */
+    display: flex; 
+    justify-content: center; 
   }
   
-  /* Navigation Link Items */
+
   .nav-links li {
-    margin: 0 1rem; /* Spacing between links */
+    margin: 0 1rem; 
   }
-  
-  /* Navigation Links Styling (Change the color as needed) */
+
   .nav-links a {
-    text-decoration: none; /* Remove underline */
-    color: #fff; /* Link text color */
-    font-weight: 500; /* Font weight */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: 500; 
+    transition: color 0.3s ease; 
   }
   
-  /* Style for Navigation Links on Hover */
+ 
   .nav-links a:hover {
-    color: #ff5733; /* Change color on hover */
+    color: #ff5733; 
   }
   

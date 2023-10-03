@@ -9,7 +9,7 @@ function Contact() {
       </p>
       <ul>
         <li>Email: gaonaemanuel7@gmail.com</li>
-        <li>Phone: +1 (123) 456-7890</li> {/* You can use any fictional phone number */}
+        <li>Phone: +1 (123) 456-7890</li> 
       </ul>
     </div>
   );

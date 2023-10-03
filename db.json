@@ -1,19 +1,152 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  "mealPlan":  [
+      {
+        "day": "Monday",
+        "image": "https://www.allrecipes.com/thmb/0VXMwCY9RVNrNvWcF_9v0iZpNqA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/JF_241160_CreamyCottageCheeseScrambled_4x3_12902-619d00dc88594ea9b8ed884a108db16d.jpg",
+        "meals": [
+          {
+            "name": "Scrambled Eggs",
+            "type": "breakfast",
+            "calories": 250
+          },
+          {
+            "name": "Grilled Chicken Salad",
+            "type": "lunch",
+            "calories": 350
+          },
+          {
+            "name": "Baked Salmon with Veggies",
+            "type": "dinner",
+            "calories": 400
+          }
+        ]
+      },
+      {
+        "day": "Tuesday",
+        "image": "https://www.lecremedelacrumb.com/wp-content/uploads/2015/05/choco-berry-oatmeal-1.jpg",
+        "meals": [
+          {
+            "name": "Oatmeal with Berries",
+            "type": "breakfast",
+            "calories": 300
+          },
+          {
+            "name": "Quinoa and Black Bean Bowl",
+            "type": "lunch",
+            "calories": 400
+          },
+          {
+            "name": "Stir-Fried Tofu with Broccoli",
+            "type": "dinner",
+            "calories": 350
+          }
+        ]
+      },
+      {
+        "day": "Wednesday",
+        "image": "https://feelgoodfoodie.net/wp-content/uploads/2017/03/Spinach-_-Feta-Stuffed-Chicken-11.jpg",
+        "meals": [
+          {
+            "name": "Greek Yogurt with Honey",
+            "type": "breakfast",
+            "calories": 200
+          },
+          {
+            "name": "Spinach and Feta Stuffed Chicken",
+            "type": "lunch",
+            "calories": 450
+          },
+          {
+            "name": "Roasted Vegetables with Quinoa",
+            "type": "dinner",
+            "calories": 380
+          }
+        ]
+      },
+      {
+        "day": "Thursday",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2017/07/shrimp-asparagus-foil-garlic-lemon-butter-sauce-3.jpg",
+        "meals": [
+          {
+            "name": "Whole Wheat Pancakes",
+            "type": "breakfast",
+            "calories": 300
+          },
+          {
+            "name": "Mediterranean Chickpea Salad",
+            "type": "lunch",
+            "calories": 320
+          },
+          {
+            "name": "Grilled Shrimp with Asparagus",
+            "type": "dinner",
+            "calories": 380
+          }
+        ]
+      },
+      {
+        "day": "Friday",
+        "image": "https://bushcooking.com/wp-content/uploads/2017/07/Caprese-Salad-1a-1.jpg",
+        "meals": [
+          {
+            "name": "Fruit Smoothie",
+            "type": "breakfast",
+            "calories": 200
+          },
+          {
+            "name": "Caprese Salad",
+            "type": "lunch",
+            "calories": 350
+          },
+          {
+            "name": "Teriyaki Chicken with Brown Rice",
+            "type": "dinner",
+            "calories": 420
+          }
+        ]
+      },
+      {
+        "day": "Saturday",
+        "image": "https://static01.nyt.com/images/2018/07/25/dining/25ausrex2/25AUSREX2-threeByTwoMediumAt2X.jpg",
+        "meals": [
+          {
+            "name": "Avocado Toast",
+            "type": "breakfast",
+            "calories": 280
+          },
+          {
+            "name": "Sweet Potato and Black Bean Tacos",
+            "type": "lunch",
+            "calories": 400
+          },
+          {
+            "name": "Lemon Herb Baked Cod",
+            "type": "dinner",
+            "calories": 380
+          }
+        ]
+      },
+      {
+        "day": "Sunday",
+        "image": "https://www.thespruceeats.com/thmb/G_4tv14ZYYvxeDG98cd6wkQppic=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/steakhouse-garlic-butter-recipe-101899-Final-5bafb21546e0fb00266e4222.jpg",
+        "meals": [
+          {
+            "name": "Veggie Omelette",
+            "type": "breakfast",
+            "calories": 300
+          },
+          {
+            "name": "Kale and Quinoa Salad",
+            "type": "lunch",
+            "calories": 350
+          },
+          {
+            "name": "Grilled Steak with Garlic Butter",
+            "type": "dinner",
+            "calories": 450
+          }
+        ]
+      }
+    ]
+  
 }

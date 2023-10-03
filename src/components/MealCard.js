@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Import your CSS file
+import './App.css'; 
 
 const MealCard = ({ day, image, meals, smallSize }) => {
   const [showDetails, setShowDetails] = useState(false);

@@ -1,4 +1,4 @@
-// NavBar.js
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function NavBar() {
         <li>
           <Link to="/about">About</Link>
         </li>
-        {/* Add more navigation links as needed */}
+        
       </ul>
     </nav>
   );

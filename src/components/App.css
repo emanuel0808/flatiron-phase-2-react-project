@@ -101,7 +101,7 @@ body {
 
 .meal-card {
   background-color: seagreen;
-  border: 2px solid seagreen;
+  border: 2px solid orange;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;

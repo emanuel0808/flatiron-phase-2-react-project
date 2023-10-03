@@ -17,7 +17,7 @@ body {
 
 
 .header {
-  background-color: orange; 
+  background-color: black; 
   color: seagreen; 
   text-align: center;
   padding: 20px;
@@ -153,7 +153,7 @@ body {
 
 
 footer {
-  background-color: #333; 
+  background-color: blackgit; 
   color: white;
   text-align: center;
   padding: 10px;

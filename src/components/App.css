@@ -132,7 +132,7 @@ body {
 .meal-details {
   padding: 10px;
   text-align: left;
-  background-color: grey; 
+  background-color: whitesmoke; 
   flex-grow: 1; 
   display: flex;
   flex-direction: column;

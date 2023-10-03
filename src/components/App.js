@@ -41,15 +41,13 @@ function App() {
           <p>
             Start your journey to a healthier lifestyle with our carefully crafted meal plans.
             Whether you're looking to shed a few pounds or simply eat better, we've got you covered.
-          </p>
-         <p>
-        
-           Our app provides carefully crafted meal plans designed to assist with weight loss and improve overall health. We believe that nutritious food is the foundation of a healthier you, and we're here to make it easy and delicious.
 
-         </p>
-         <p>
-          Feel free to explore the app and see all the delicious meals you can add to your diet to improve your overall health.
-         </p>
+            Our app provides carefully crafted meal plans designed to assist with weight loss and improve overall health. We believe that nutritious food is the foundation of a healthier you, and we're here to make it easy and delicious.
+
+            Feel free to explore the app and see all the delicious meals you can add to your diet to improve your overall health.
+          </p>
+         
+         
       
      
         

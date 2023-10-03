@@ -8,7 +8,7 @@
 /* Set a background color for the entire app */
 body {
   font-family: Arial, sans-serif;
-  background-color: purple; /* Light gray background */
+  background-color: gray; /* Light gray background */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
   height: 100vh; /* Set the body to full height of the viewport */
@@ -92,18 +92,19 @@ body {
 }
 
 /* Style the meal cards container */
+/* Style the meal cards container */
 .meal-card-container {
   display: flex;
   flex-wrap: wrap; /* Allow cards to wrap to the next row */
   justify-content: space-between; /* Space evenly between cards horizontally */
-  padding: 20px;
-  max-width: 1200px;
+  padding: 25px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 /* Style the meal cards */
 .meal-card {
-  background-color: white;
+  background-color: grey;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -111,14 +112,16 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   overflow: hidden;
-  width: calc(33.33% - 20px); /* 33.33% width for each card with spacing between */
+  width: calc(25% - 20px); /* 25% width for each card with spacing between */
   margin-bottom: 20px; /* Add spacing between rows */
+  display: flex;
+  flex-direction: column;
 }
 
 /* For screens smaller than 1200px, change the layout to 2 columns in the second row */
 @media screen and (max-width: 1200px) {
   .meal-card {
-    width: calc(50% - 20px); /* 50% width for each card on smaller screens */
+    width: calc(33.33% - 20px); /* 33.33% width for each card on smaller screens */
   }
 }
 
@@ -133,13 +136,25 @@ body {
 .meal-details {
   padding: 10px;
   text-align: left;
-  background-color: #f8f8f8; /* Light gray background */
+  background-color: grey; /* Light gray background */
+  flex-grow: 1; /* Allow details to expand and fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .meal-details p {
   font-size: 1rem;
   margin: 5px 0;
 }
+
+/* Style the meal images to make them fit without scrolling */
+.meal-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 
 /* Style the footer */
 footer {

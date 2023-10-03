@@ -6,8 +6,8 @@ import MealPlan from './MealPlan';
 import Footer from './Footer';
 import MealCard from './MealCard';
 import MealForm from './MealForm';
-import About from './About'; // Import the About component
-import Contact from './Contact'; // Import the Contact component
+import About from './About';
+import Contact from './Contact';
 
 function App() {
   const [mealPlan, setMealPlan] = useState([]);
@@ -44,24 +44,29 @@ function App() {
           </p>
         </div>
         <MealForm onSearch={handleSearch} />
-        <div className="meal-card-container">
-          {filteredMeals.map((dayData, index) => (
-            <MealCard
-              key={index}
-              day={dayData.day}
-              image={dayData.image}
-              meals={dayData.meals}
-              smallSize // Add a prop to indicate smaller size
-            />
-          ))}
-        </div>
-        <Footer />
         
+        {/* Conditionally render the meal cards on the homepage */}
+        {window.location.pathname === '/' && (
+          <div className="meal-card-container">
+            {filteredMeals.map((dayData, index) => (
+              <MealCard
+                key={index}
+                day={dayData.day}
+                image={dayData.image}
+                meals={dayData.meals}
+                smallSize // Add a prop to indicate smaller size
+              />
+            ))}
+          </div>
+        )}
+
         {/* Define routes for About and Contact */}
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+
+        <Footer />
       </div>
     </Router>
   );

@@ -4,7 +4,7 @@ function MealForm({ onSearch }) {
   const [searchDay, setSearchDay] = useState('');
 
   const handleSearch = () => {
-    // Pass the searchDay value to the parent component (App.js) for handling the search
+    
     onSearch(searchDay);
   };
 

@@ -1,40 +1,37 @@
-/* Reset some default browser styles */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Set a background color for the entire app */
 body {
   font-family: Arial, sans-serif;
-  background-color: gray; /* Light gray background */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  height: 100vh; /* Set the body to full height of the viewport */
+  background-color: gray; 
+  margin: 0; 
+  padding: 0; 
+  height: 100vh; 
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content horizontally */
+  align-items: center; 
 }
 
-/* Style the header */
+
 .header {
-  background-color: #333; /* Dark background color */
-  color: white; /* Text color */
+  background-color: #333; 
+  color: white; 
   text-align: center;
   padding: 20px;
 }
 
 .header h1 {
-  font-size: 2rem; /* Larger font size for the heading */
+  font-size: 2rem; 
   margin-bottom: 10px;
 }
 
 .header p {
-  font-size: 1rem; /* Font size for the paragraph */
+  font-size: 1rem; 
 }
 
-/* Style the navigation links */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -55,16 +52,15 @@ body {
 }
 
 .nav-links a:hover {
-  color: #ff5722; /* Hover color */
+  color: #ff5722; 
 }
 
-/* Style the meal form */
 .meal-form {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row; /* Display input and button horizontally */
+  flex-direction: row; 
 }
 
 .meal-form input[type="text"] {
@@ -78,7 +74,7 @@ body {
 
 .meal-form button {
   padding: 10px 20px;
-  background-color: #ff5722; /* Orange button background color */
+  background-color: #ff5722; 
   border: none;
   border-radius: 5px;
   color: white;
@@ -88,11 +84,11 @@ body {
 }
 
 .meal-form button:hover {
-  background-color: #ff7043; /* Hover background color */
+  background-color: #ff7043; 
 }
 
-/* Style the meal cards container */
-/* Style the meal cards container */
+
+
 .meal-card-container {
   display: flex;
   flex-wrap: wrap; 
